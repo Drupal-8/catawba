@@ -1,0 +1,59 @@
+<?php 
+
+/**
+ * Implements hook_css_alter().
+ */
+ function catawba_css_alter(&$css) {
+   // Add Google Font Wellfleet.
+   $wellfleet = '//fonts.googleapis.com/css?family=Wellfleet';
+   $css[$wellfleet] = array(
+   'data' => $wellfleet,
+   'type' => 'external',
+   'every_page' => TRUE,
+   'media' => 'all',
+   'preprocess' => FALSE,
+   'group' => CSS_AGGREGATE_THEME,
+   'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+   'weight' => 2,
+   );
+
+   // Add Google Font Arvo.
+   $arvo = '//fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic';
+   $css[$arvo] = array(
+   'data' => $arvo,
+   'type' => 'external',
+   'every_page' => TRUE,
+   'media' => 'all',
+   'preprocess' => FALSE,
+   'group' => CSS_AGGREGATE_THEME,
+   'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+   'weight' => 3,
+   );
+
+// Add Google Font Oswald.
+$oswald = '//fonts.googleapis.com/css?family=Oswald';
+$css[$oswald] = array(
+'data' => $oswald,
+'type' => 'external',
+'every_page' => TRUE,
+'media' => 'all',
+'preprocess' => FALSE,
+'group' => CSS_AGGREGATE_THEME,
+'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+'weight' => 4,
+);
+
+// Add Google Font Goudy.
+$goudy = '//fonts.googleapis.com/css?family=Goudy+Bookletter+1911';
+$css[$goudy] = array(
+'data' => $goudy,
+'type' => 'external',
+'every_page' => TRUE,
+'media' => 'all',
+'preprocess' => FALSE,
+'group' => CSS_AGGREGATE_THEME,
+'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+'weight' => 5,
+);
+
+ }

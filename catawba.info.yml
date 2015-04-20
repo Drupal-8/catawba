@@ -1,0 +1,13 @@
+name: Catawba
+type: theme
+description: 'A Drupal 8 parallax theme.'
+package: Custom
+core: 8.x
+libraries:
+  - catawba/global-styling
+regions:
+  header: Header
+  content: Content
+  regions: Header
+  content: Content
+  footer: Footer
